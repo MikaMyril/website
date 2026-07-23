@@ -31,7 +31,7 @@
             height: 90vmin;
             max-width: 550px;
             max-height: 550px;
-            opacity: 0.18; /* Etwas angehoben für das strahlende Gold */
+            opacity: 0.18; 
             z-index: 1;
             pointer-events: none;
         }
@@ -84,7 +84,7 @@
 
         input:focus, textarea:focus {
             outline: none;
-            border-color: #D4AF37; /* Goldener Fokus-Rahmen */
+            border-color: #D4AF37; 
             box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
         }
 
@@ -141,10 +141,10 @@
 </head>
 <body>
 
-    <!-- Korrigiertes Jupiter-Siegel: Linienanordnung exakt nach historischen Vorgaben -->
+    <!-- Exakter Kamea-Linienzug des 4x4 Jupiter-Quadrate nach Agrippa -->
     <!-- Grid-Zentren Spalten: 65, 155, 245, 335 | Zeilen: 65, 155, 245, 335 -->
     <svg class="jupiter-bg" viewBox="0 0 400 400" xmlns="http://w3.org">
-        <!-- Äußerer Rahmen des Planetenquadrats in Echt-Gold -->
+        <!-- Äußerer Rahmen des Planetenquadrats -->
         <rect x="20" y="20" width="360" height="360" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
         
         <!-- Das 4x4 Raster als ganz feine, dezente Hilfslinien -->
@@ -155,21 +155,23 @@
         <line x1="20" y1="200" x2="380" y2="200" stroke="#eadecc" stroke-width="0.5" stroke-dasharray="2 3"/>
         <line x1="20" y1="290" x2="380" y2="290" stroke="#eadecc" stroke-width="0.5" stroke-dasharray="2 3"/>
 
-        <!-- REINES GOLD: Pfade basierend auf getrennten Linienzügen der Agrippa-Tradierung -->
+        <!-- REINES GOLD: Die 4 mathematischen Pfad-Blöcke -->
         
-        <!-- Obere Querlinie: Verbindet NUR die mittleren Zahlen 14 (155,65) und 15 (245,65) -->
-        <line x1="155" y1="65" x2="245" y2="65" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
+        <!-- Pfad 1: Verbindung von 1 -> 2 -> 3 -> 4 -->
+        <!-- Koordinaten: 1(335,65), 2(155,335), 3(245,335), 4(65,65) -->
+        <path d="M 335,65 L 155,335 L 245,335 L 65,65" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
         
-        <!-- Untere Querlinie: Verbindet NUR die mittleren Zahlen 2 (155,335) und 3 (245,335) -->
-        <line x1="155" y1="335" x2="245" y2="335" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
-
-        <!-- Diagonale Kreuzungen Block 1 & 4 (Verbindung zu den Ecken 4, 1, 16, 13) -->
-        <line x1="65" y1="65" x2="335" y2="335" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
-        <line x1="335" y1="65" x2="65" y2="335" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
+        <!-- Pfad 2: Verbindung von 5 -> 6 -> 7 -> 8 -->
+        <!-- Koordinaten: 5(65,245), 6(245,155), 7(155,155), 8(335,245) -->
+        <path d="M 65,245 L 245,155 L 155,155 L 335,245" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
         
-        <!-- Innere Rauten-Struktur für die Blöcke 2 & 3 (Zahlen 5 bis 12 im Zentrum) -->
-        <path d="M 65,155 L 155,245 L 335,155 M 65,245 L 155,155 L 335,245" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-        <path d="M 155,155 L 245,245 M 155,245 L 245,155" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <!-- Pfad 3: Verbindung von 9 -> 10 -> 11 -> 12 -->
+        <!-- Koordinaten: 9(65,155), 10(245,245), 11(155,245), 12(335,155) -->
+        <path d="M 65,155 L 245,245 L 155,245 L 335,155" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        
+        <!-- Pfad 4: Verbindung von 13 -> 14 -> 15 -> 16 -->
+        <!-- Koordinaten: 13(335,335), 14(155,65), 15(245,65), 16(65,335) -->
+        <path d="M 335,335 L 155,65 L 245,65 L 65,335" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
     </svg>
 
     <div class="container">
