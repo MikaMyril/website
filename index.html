@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt & Impressum</title>
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            /* Ein edler, warmer Creme-Weiß-Ton (Das Buchcover) */
+            background-color: #fcf9f2; 
+            color: #2c251e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Das exakte Jupiter-Quadrat-Linienzeichen als Hintergrund-Wasserzeichen */
+        .jupiter-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85vmin;
+            height: 85vmin;
+            max-width: 600px;
+            max-height: 600px;
+            opacity: 0.12; /* Sehr dezent im Hintergrund, damit der Text lesbar bleibt */
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.85); /* Leicht transparentes Weiß */
+            backdrop-filter: blur(5px); /* Sanfter Glaseffekt über dem Siegel */
+            padding: 35px;
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(44, 37, 30, 0.06);
+            border: 1px solid #eadecc;
+            max-width: 450px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 40px;
+            position: relative;
+            z-index: 2; /* Liegt über dem Hintergrund-Siegel */
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #1a1510;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: normal;
+        }
+
+        label {
+            display: block;
+            margin: 16px 0 6px;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: #4a3e33;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1c4b2;
+            background-color: #fffdfa;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 15px;
+            color: #2c251e;
+            font-family: sans-serif;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #c4a473; /* Goldener Fokus-Rahmen */
+            box-shadow: 0 0 5px rgba(196, 164, 115, 0.3);
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        /* Eleganter, matter Gold-Button */
+        button {
+            width: 100%;
+            background-color: #c4a473;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 24px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #aa8956;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 12px;
+            color: #6e6051;
+            width: 100%;
+            max-width: 600px;
+            border-top: 1px solid #eadecc;
+            padding-top: 20px;
+            position: relative;
+            z-index: 2;
+            line-height: 1.6;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section strong {
+            color: #1a1510;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Das mathematische Linienband des 4x4 Jupiter-Quadrats von 1 bis 16 (Ihr Cover-Design) -->
+    <svg class="jupiter-bg" viewBox="0 0 300 300" xmlns="http://w3.org">
+        <rect x="15" y="15" width="270" height="270" fill="none" stroke="#c4a473" stroke-width="3"/>
+        <line x1="82.5" y1="15" x2="82.5" y2="285" stroke="#c4a473" stroke-width="0.5" stroke-dasharray="2 4"/>
+        <line x1="150" y1="15" x2="150" y2="285" stroke="#c4a473" stroke-width="0.5" stroke-dasharray="2 4"/>
+        <line x1="217.5" y1="15" x2="217.5" y2="285" stroke="#c4a473" stroke-width="0.5" stroke-dasharray="2 4"/>
+        <line x1="15" y1="82.5" x2="285" y2="82.5" stroke="#c4a473" stroke-width="0.5" stroke-dasharray="2 4"/>
+        <line x1="15" y1="150" x2="285" y2="150" stroke="#c4a473" stroke-width="0.5" stroke-dasharray="2 4"/>
+        <line x1="15" y1="217.5" x2="285" y2="217.5" stroke="#c4a473" stroke-width="0.5" stroke-dasharray="2 4"/>
+        <path d="M 48.75,48.75 L 116.25,48.75 L 183.75,48.75 L 251.25,48.75 L 251.25,116.25 L 183.75,116.25 L 116.25,116.25 L 48.75,116.25 L 48.75,183.75 L 116.25,183.75 L 183.75,183.75 L 251.25,183.75 L 251.25,251.25 L 183.75,251.25 L 116.25,251.25 L 48.75,251.25" fill="none" stroke="#c4a473" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="48.75" cy="48.75" r="5" fill="#c4a473" />
+        <line x1="38.75" y1="251.25" x2="58.75" y2="251.25" stroke="#c4a473" stroke-width="4" />
+    </svg>
+
+    <div class="container">
+        <h2>Kontakt aufnehmen</h2>
+        <form action="https://formspree.io/f/mbdnzrqz">
+            <label for="name">Ihr Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Max Mustermann">
+
+            <label for="email">Ihre E-Mail-Adresse:</label>
+            <input type="email" id="email" name="_replyto" required placeholder="name@beispiel.de">
+
+            <label for="message">Ihre Nachricht:</label>
+            <textarea id="message" name="message" required placeholder="Schreiben Sie hier Ihre Nachricht..."></textarea>
+
+            <button type="submit">Nachricht senden</button>
+        </form>
+    </div>
+
+    <footer>
+        <!-- Österreichisches Impressum -->
+        <div class="footer-section">
+            <strong>Impressum</strong>
+            Medieninhaber & Herausgeber: [Mika Myril]<br>
+            c/o [Kermann]<br>
+            [Steinbach 8]<br>
+            [8462 Gamlitz]<br>
+            Österreich<br>
+            E-Mail: [mikamyril@proton.me]<br><br>
+            <strong>Unternehmensgegenstand / Blattlinie</strong>
+            Präsentation und Bewerbung des Buches "[Mein Raum. Besetzt.]".
+        </div>
+
+        <!-- Integrierte Datenschutzerklärung (DSGVO) -->
+        <div class="footer-section" style="border-top: 1px dotted #eadecc; padding-top: 15px;">
+            <strong>Datenschutzerklärung</strong>
+            <p style="margin: 5px 0; text-align: justify;">
+                Der Schutz Ihrer Daten ist mir ein Anliegen. Diese Webseite speichert keine Cookies und nutzt keine Tracking-Tools. Wenn Sie über das bereitgestellte Formular Kontakt mit mir aufnehmen, werden Ihre Angaben (Name, E-Mail-Adresse, Nachricht) ausschließlich zur Bearbeitung und Beantwortung Ihrer Anfrage verarbeitet. Eine Weitergabe an Dritte erfolgt nicht. Die Datenverarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer gespeicherten Daten sowie ein Beschwerderecht bei der österreichischen Datenschutzbehörde.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
